@@ -13,7 +13,7 @@ import com.matheustirabassi.workshopmongo.services.exception.ObjectNotFoundExcep
 public class PostService {
 	@Autowired
 	private PostRepository repo;
-	
+
 	public Post findById(String id) {
 		Optional<Post> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Object not founded"));
